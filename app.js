@@ -84,11 +84,11 @@ Solve Exercise 6 here:
 */
 
 
-game.gyms.forEach((gyms) => {
-  if (game.gyms.difficulty < 3) {
-    game.gyms.completed = true;
-  }
-});
+// game.gyms.forEach((gym) => {
+//   if (game.gym.difficulty < 3) {
+//     gym.completed = true;
+//   }
+// });
 
 
 
@@ -193,11 +193,11 @@ Exercise 12
 Solve Exercise 12 here:
 */
 
-game.gyms.forEach((gyms) => {
-  if (gyms.difficulty < 6) {
-    game.gyms.completed = true;
-  }
-});
+// game.gyms.forEach((gym) => {
+//   if (gym.difficulty < 6) {
+//     gym.completed = true;
+//   }
+// });
 
 
 /*
@@ -265,13 +265,21 @@ Exercise 15
 Solve Exercise 15 here:
 */
 
-game.gyms.forEach((gyms) => {
-  if (gyms.difficulty < 8) {
-    game.gyms.completed = true;
+game.gyms.forEach((gym) => {
+  if (gym.difficulty < 8) {
+    gym.completed = true;
   }
 });
 
+/*
+Exercise 16
+1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
 
+
+Solve Exercise 16 here:
+*/
+
+console.log(game);
 
 //console.dir(pokemon, { maxArrayLength: null });
 // console.log(game.party);
@@ -279,4 +287,4 @@ game.gyms.forEach((gyms) => {
 // console.log(game.gyms);
 // game.catchPokemon(pokemon);
 // console.log(game.items);
-// console.log(game.gyms);
+console.log(game.gyms);
