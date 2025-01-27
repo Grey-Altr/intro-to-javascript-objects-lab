@@ -46,11 +46,14 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
+pokemon.forEach(pokemon => {
+  if (pokemon.starter === true) {
+    game.party.push(pokemon);
+  }
+})
 
-const selectStarterMonToParty = () => {
-    
-}
+// game.party.push(starterPokemon);
 
 //console.dir(pokemon, { maxArrayLength: null });
-
 console.log(game);
+// console.log(pokemon);
