@@ -194,16 +194,54 @@ Solve Exercise 12 here:
 */
 
 game.gyms.forEach((gyms) => {
-  if (game.gyms.difficulty < 6) {
+  if (gyms.difficulty < 6) {
     game.gyms.completed = true;
   }
 });
 
 
+/*
+Exercise 13
+1. Create a `gymStatus` method in `game` to tally completed and incomplete gyms.
+2. How will you iterate through the `gyms` array and update the tally? Remember to log the final tally.
+
+This method should:
+  - Not accept any arguments.
+  - Initially create a constant `gymTally`, which is an object that has two 
+    properties: `completed` and `incomplete`, both of which are initially set to 0.
+  - Iterate through the objects in the `game.gyms` array and update the 
+    properties on `gymTally` as follows: 
+    - `completed` should count how many gyms in the array have a value of `true` 
+      for their `completed` property. 
+    - `incomplete` should count how many gyms in the array have a value of 
+      `false` for their `completed` property.
+  - Log the value of `gymTally`.
+  - The method should not return anything.
+
+For example, if five gym objects have a value of `true` on their `completed` property and three gym objects have a value of `false` on their `completed` property, the logged value would be: `{ completed: 5, incomplete: 3 }`.
+
+Solve Exercise 13 here:
+*/
+
+
+game.gymStatus = () => {
+  const gymTally = { completed: 0, incomplete: 0 };
+
+  game.gyms.forEach(gym => {
+    if (gym.completed) {
+      gymTally.completed++;
+    } else {
+      gymTally.incomplete++;
+    }
+  });
+};
+
+game.gymStatus();
+
 //console.dir(pokemon, { maxArrayLength: null });
 // console.log(game.party);
 // console.log(pokemon);
-// console.log(game.gyms);
+console.log(game.gyms);
 // game.catchPokemon(pokemon);
 // console.log(game.items);
 // console.log(game.gyms);
