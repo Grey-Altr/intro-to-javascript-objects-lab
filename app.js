@@ -107,7 +107,10 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 7 here:
 */
 
-
+game.party.forEach((pokemonInParty, i) => {
+  let evolvedPokemonIndex = pokemonInParty.number;
+  game.party.splice(i, 1, pokemon[evolvedPokemonIndex]);
+});
 
 //console.dir(pokemon, { maxArrayLength: null });
 console.log(game.party);
