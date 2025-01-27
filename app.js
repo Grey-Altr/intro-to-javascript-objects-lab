@@ -52,8 +52,24 @@ pokemon.forEach(pokemon => {
   }
 })
 
-// game.party.push(starterPokemon);
+
+
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+*/
+
+pokemon.forEach((pokemon) => {
+  if (pokemon.starter === true && pokemon.hp >= 35 && game.party.length <= 4) {
+    game.party.push(pokemon);
+  }
+});
+
 
 //console.dir(pokemon, { maxArrayLength: null });
-console.log(game);
+console.log(game.party);
 // console.log(pokemon);
