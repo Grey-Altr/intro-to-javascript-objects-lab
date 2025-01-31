@@ -57,6 +57,12 @@ pokemon.forEach(pokemon => {
 });
 */
 
+for (let i = 0; i < pokemon.length; i++) {
+  if (pokemon.starter === true) {
+    game.party.push(pokemon);
+  };
+};
+
 
 /*
 Exercise 5
